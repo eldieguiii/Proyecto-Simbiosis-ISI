@@ -279,9 +279,10 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 | ID | Categoría y atributo | Requisito no funcional | Ámbito (Global/Local) | UR/FR relacionados | Método de comprobación | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
 | NFR-07 |NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización.| G | -  | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual. | - |
-| NFR - 01 | NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma deberá mantener una disponibilidad mínima de el 99.5% cada mes. | G | Monitoreado del tiempo que los servidores están activos y funcionando correctamente, asegurandose de que llegue a los mínimos establecidos. | - | 
-| aaaaaa | bbbbbbb | cccccc | ddddddd | eeeeeeee | ffffffff |
-| aaaaaa | bbbbbbb | cccccc | ddddddd | eeeeeeee | ffffffff |
+| NFR-01 | NFR-Q (Disponibilidad) |La plataforma deberá mantener una disponibilidad mínima de el 99.5% cada mes. | G | - | Monitoreado del tiempo que los servidores están activos y funcionando correctamente, asegurandose de que llegue a los mínimos establecidos. | - |
+| NFR-02 | NFR-I (Interfaces de software) | La integración con una cuenta de Google deberá ser implementada utilizando OAuth 2.0 u OpenID Connect sobre HTTPS, y la plataforma no almacenará la contraseña de Google. | L | FR-006, FR-018 | Se realizará una prueba de autenticación con una cuenta de prueba y la revisión de la configuración de la integración. | - |
+| NFR-03 | NFR-R (Tecnología y entorno) | La plataforma se desplegará en una infraestructura en la nube gestionada por un proveedor externo. | G | - | Se comprobará revisando la arquitectura, la configuración del despliegue, las dependencias del cliente y el acceso desde los navegadores compatibles. | - |
+| aaaaa | bbbbb | ccccc | ddddd | eeeee | fffff | ggggg |
 
 Categorías y atributos: 
 1) Requisitos de calidad (NFR-Q): Rendimiento, Usabilidad, Seguridad, Fiabilidad, Disponibilidad, Modificabilidad, Portabilidad, Eficiencia, Escalabilidad, Verificabilidad / Testabilidad, Robustez, Seguridad funcional (safety), Integridad, Reusabilidad, Instalabilidad.
