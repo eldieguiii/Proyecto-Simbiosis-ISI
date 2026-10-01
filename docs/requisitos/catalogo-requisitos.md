@@ -279,6 +279,9 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 | ID | Categoría y atributo | Requisito no funcional | Ámbito (Global/Local) | UR/FR relacionados | Método de comprobación | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
 | NFR-07 |NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización.| G | -  | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual. | - |
+| NFR - 01 | NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma deberá mantener una disponibilidad mínima de el 99.5% cada mes. | G | Monitoreado del tiempo que los servidores están activos y funcionando correctamente, asegurandose de que llegue a los mínimos establecidos. | - | 
+| aaaaaa | bbbbbbb | cccccc | ddddddd | eeeeeeee | ffffffff |
+| aaaaaa | bbbbbbb | cccccc | ddddddd | eeeeeeee | ffffffff |
 
 Categorías y atributos: 
 1) Requisitos de calidad (NFR-Q): Rendimiento, Usabilidad, Seguridad, Fiabilidad, Disponibilidad, Modificabilidad, Portabilidad, Eficiencia, Escalabilidad, Verificabilidad / Testabilidad, Robustez, Seguridad funcional (safety), Integridad, Reusabilidad, Instalabilidad.
