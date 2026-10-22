@@ -223,47 +223,104 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:**
+UC-05: Actualizar perfil
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:**
+Concretar el comportamiento de la actualización del perfil.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:**
+Actor principal: Usuario.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** 
+El usuario tiene una cuenta activa y una sesión iniciada.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:**
+El usuario desea actualizar sus datos.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:**
+1. El usuario solicita actualizar su perfil.
+2. El usuario modifica los datos y/o preferencias modificables que desee cambiar.
+3. El usuario solicita guardar los datos actualizados.
+  Si el usuario decide cancelar los cambios, se sigue el flujo 3.a)
+4. El sistema verifica que los cambios son válidos.
+  Si los cambios no son válidos, se sigue el flujo 4.a)
+5. El sistema se ve actualizado con los nuevos datos del usuario.
+  Si el sistema no puede guardar los datos, se sigue el flujo 5.a)
+6. El caso de uso finaliza.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):**
+3.a) 
+    1. El sistema descarta los cambios realizados y conserva los datos anteriores.
+    2. El caso de uso finaliza.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+4.a)
+    1. El sistema informa al usuario sobre el campo que debe ser corregido.
+    2. El usuario corrige los datos.
+    2. Se vuelve al paso 3 del flujo principal.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+5.a) 
+    1. El sistema informa del problema y no confirma la actualización.
+    2. El sistema conserva los datos introducidos y aún no guardados.
+    3. Se vuelve al paso 4 del flujo principal.
 
-**Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+**Postcondiciones:**
+Si la actualización de datos es exitosa, queda reflejado en el perfil del usuario.
+En caso contrario, los datos no cambian.
+
+**Reglas y NFR pertinentes:**
+- - -
+
+**Preguntas abiertas:** 
+- - -
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:**
+UC-21: Buscar Recetas
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:**
+Concretar el comportamiento de la búsqueda de recetas.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:**
+Actor principal: Usuario.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:**
+El usuario tiene una cuenta activa y una sesión iniciada.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:**
+El usuario desea buscar una receta que cumpla cierta(s) condición(es).
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:**
+1. El usuario solicita buscar recetas.
+2. El usuario introduce las condiciones que tienen que cumplir las recetas deseadas.
+3. El usuario solicita realizar la búsqueda.
+  En caso de haber introducido y excluido un mismo ingrediente, se sigue el flujo 3.a)
+4. El sistema obtiene las recetas que cumplen los criterios.
+5. El sistema muestra al usuario las recetas disponibles.
+  En caso de no existir ninguna receta que cumpla las condiciones, se sigue el flujo 5.a)
+6. El caso de uso finaliza.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):**
+3.a)
+    1. El sistema señala el conflicto.
+    2. El usuario corrige el error.
+    3. Se vuelve al paso 2 del flujo principal.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+5.a)
+    1. El sistema avisa al usuario de que no hay resultados para esa búsqueda.
+    2. El sistema conserva los filtros introducidos.
+    3. Se vuelve al paso 1 del flujo principal.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+**Postcondiciones:**
+Si la búsqueda de recetas es exitosa, se le muestra al usuario las recetas que cumplan las condiciones.
+En caso contrario, no se muestran.
 
-**Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+**Reglas y NFR pertinentes:**
+- - -
+
+**Preguntas abiertas:**
+- - -
 
 ## 7 Continuidad entre iteraciones
 
